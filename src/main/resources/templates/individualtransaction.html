@@ -9,7 +9,10 @@
 
 </div>
 <div>Data: <span th:text="${transactionsIndividual.date}"></span></div>
-<div>Amount: <span th:text="${transactionsIndividual.amount}"></span></div>
+
+<div>Amount: <span th:text="${transactionsIndividual.type == 'C'}? ${transactionsIndividual.amount}*-1:${transactionsIndividual.amount}"></span></div>
+
+
 <div>Description: <span th:text="${transactionsIndividual.description}"></span></div>
 
 <div>
@@ -18,3 +21,4 @@
 
 </body>
 </html>
+
